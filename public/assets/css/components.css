@@ -13,3 +13,22 @@
 .product-meta-line{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}.product-code{font-size:.72rem;font-weight:900;letter-spacing:.06em;color:var(--primary);background:var(--primary-soft);border-radius:999px;padding:3px 8px;white-space:nowrap}.custom-badge svg{width:13px;height:13px;margin-right:4px;flex:0 0 auto}.custom-badge{background:var(--badge-bg)!important;color:var(--badge-fg)!important;border:1px solid var(--badge-border)!important;box-shadow:0 4px 14px rgba(0,0,0,.08)}.product-info h3 .custom-badge{margin-left:6px;vertical-align:middle;font-size:.62rem;min-height:20px;padding:0 7px}.badge-anim-pulse{animation:badgePulse 1.8s ease-in-out infinite}.badge-anim-glow{animation:badgeGlow 2.2s ease-in-out infinite}.badge-anim-shimmer{position:relative;overflow:hidden}.badge-anim-shimmer::after{content:"";position:absolute;inset:-40% -80%;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);animation:badgeShimmer 2.6s linear infinite}.badge-anim-float{animation:badgeFloat 2.4s ease-in-out infinite}.badge-anim-zoom{animation:badgeZoom 2.1s ease-in-out infinite}.badge-anim-slide{animation:badgeSlide 2.4s ease-in-out infinite}.badge-anim-gradient{background:linear-gradient(90deg,var(--badge-bg),var(--accent),var(--badge-bg))!important;background-size:200% 100%!important;animation:badgeGradient 3s linear infinite}@keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.055)}}@keyframes badgeGlow{0%,100%{box-shadow:0 0 0 rgba(0,0,0,0)}50%{box-shadow:0 0 18px color-mix(in srgb,var(--badge-bg) 55%,transparent)}}@keyframes badgeShimmer{to{transform:translateX(100%)}}@keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes badgeZoom{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}@keyframes badgeSlide{0%,100%{transform:translateX(0)}50%{transform:translateX(2px)}}@keyframes badgeGradient{to{background-position:200% 0}}
 @media (prefers-reduced-motion:reduce){.badge-anim-pulse,.badge-anim-glow,.badge-anim-shimmer::after,.badge-anim-float,.badge-anim-zoom,.badge-anim-slide,.badge-anim-gradient{animation:none!important}}
 .brand-mark img{background:#92278f}.brand-mark{overflow:hidden;border:1px solid color-mix(in srgb,var(--primary) 18%,transparent)}
+/* Favoritos — estado ativo */
+.fav-btn.active{
+  color:var(--danger);
+  background:#fff1f4;
+}
+
+.fav-btn.active svg{
+  fill:currentColor;
+  stroke:currentColor;
+}
+
+.fav-btn.active:hover{
+  background:#fbe8ec;
+}
+
+.fav-btn:disabled{
+  opacity:.65;
+  cursor:wait;
+}
