@@ -1,0 +1,71 @@
+GEISE CONFECÇÕES V4 — COMECE AQUI
+==================================
+
+ESTA ENTREGA É UMA RELEASE CANDIDATE PARA HOMOLOGAÇÃO.
+Teste detalhadamente antes de divulgar para clientes.
+
+1) TESTAR NO COMPUTADOR
+-----------------------
+- Instale Node.js 22.5+.
+- Abra um terminal nesta pasta.
+- Execute: npm install
+- Copie .env.example para .env.
+- No .env, defina um ADMIN_EMAIL válido e uma ADMIN_PASSWORD forte.
+- Execute: npm run verify
+- Execute: npm start
+- Abra: http://localhost:8080
+
+2) COLOCAR NO AR PARA HOMOLOGAÇÃO
+---------------------------------
+Leia: docs/DEPLOY-RENDER.md
+
+O arquivo render.yaml já cria:
+- Web Service Node;
+- PostgreSQL;
+- variáveis não secretas;
+- health check em /api/health.
+
+Você preencherá no Render apenas os segredos necessários, especialmente:
+- ADMIN_EMAIL
+- ADMIN_PASSWORD
+
+3) PAGAMENTO INICIAL
+--------------------
+PAYMENT_PROVIDER=manual
+
+O site cria o pedido e abre o WhatsApp oficial. A equipe confirma o pagamento manualmente no painel somente depois de conferir o recebimento real.
+
+O site nunca deve pedir senha bancária, CVV ou código de autenticação pelo WhatsApp.
+
+4) IA INICIAL
+-------------
+AI_PROVIDER=local
+
+Esse modo não usa uma API paga. A integração com OpenAI pode ser ativada depois, somente com chave no servidor/hospedagem.
+
+5) ANTES DE DIVULGAR
+--------------------
+- Cadastre produtos reais.
+- Substitua imagens demonstrativas.
+- Confira preço e estoque fisicamente.
+- Teste #código.
+- Teste cadastro, CPF e endereço.
+- Teste entrega, retirada e frete grátis.
+- Teste pedido e WhatsApp.
+- Teste painel e confirmação de pagamento.
+- Faça a bateria de 3 dias em docs/TESTE-3-DIAS.md.
+- Use infraestrutura persistente/backup antes da operação pública real.
+
+6) SEGURANÇA
+------------
+NUNCA envie ao GitHub:
+- .env
+- senhas
+- tokens
+- chaves de API
+- bancos .sqlite/.db
+- arquivos de bootstrap de credenciais
+
+Leia também:
+- docs/AUDITORIA-FINAL-V4.md
+- docs/GO-LIVE-CHECKLIST.md

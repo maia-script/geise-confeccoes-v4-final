@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Fallback estático. Em execução pelo servidor, /sitemap.xml é gerado dinamicamente usando PUBLIC_BASE_URL. -->
+  <url><loc>https://www.lojageise.com/</loc></url>
+  <url><loc>https://www.lojageise.com/catalogo</loc></url>
+  <url><loc>https://www.lojageise.com/promocoes</loc></url>
+  <url><loc>https://www.lojageise.com/novidades</loc></url>
+  <url><loc>https://www.lojageise.com/inspire-se</loc></url>
+  <url><loc>https://www.lojageise.com/blog</loc></url>
+  <url><loc>https://www.lojageise.com/sobre</loc></url>
+</urlset>

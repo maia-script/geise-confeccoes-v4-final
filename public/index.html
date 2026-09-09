@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#92278f">
+  <meta name="description" content="Geise Confecções — moda, acessórios e variedades com uma experiência de compra moderna.">
+  <meta name="robots" content="index,follow">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <title>Geise Confecções</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <div id="app-shell">
+    <header class="site-header" id="siteHeader">
+      <div class="topbar">Catálogo online • atendimento próximo • suporte pelo WhatsApp</div>
+      <div class="header-main container">
+        <button class="icon-btn mobile-only" id="menuButton" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false"><span data-icon="menu"></span></button>
+        <a class="brand" href="/" data-link aria-label="Geise Confecções — início"><span class="brand-mark">GC</span><span><strong>GEISE</strong><small>CONFECÇÕES</small></span></a>
+        <form class="header-search" id="globalSearch" role="search"><span data-icon="search"></span><input name="q" autocomplete="off" placeholder="Busque por nome ou #código" aria-label="Buscar produtos"><div class="search-suggestions" id="searchSuggestions" hidden></div></form>
+        <nav class="header-actions" aria-label="Ações principais">
+          <a class="icon-btn desktop-action" href="/minha-conta" data-link aria-label="Minha conta"><span data-icon="user"></span></a>
+          <a class="icon-btn" href="/favoritos" data-link aria-label="Favoritos"><span data-icon="heart"></span><span class="count-badge" id="favCount" hidden>0</span></a>
+          <a class="icon-btn" href="/carrinho" data-link aria-label="Carrinho"><span data-icon="bag"></span><span class="count-badge" id="cartCount" hidden>0</span></a>
+        </nav>
+      </div>
+      <nav class="category-nav desktop-only" aria-label="Categorias"><div class="container" id="categoryNav"></div></nav>
+    </header>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true"><div class="mobile-menu-head"><strong>Menu</strong><button class="icon-btn" id="menuClose" aria-label="Fechar menu"><span data-icon="x"></span></button></div><div id="mobileMenuLinks"></div></aside>
+    <div class="backdrop" id="backdrop" hidden></div>
+
+    <main id="main" tabindex="-1"><div class="page-loading"><div class="skeleton hero-skeleton"></div></div></main>
+
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="/" data-link><span class="brand-mark">GC</span><span><strong>GEISE</strong><small>CONFECÇÕES</small></span></a><p id="footerTagline">Moda, variedades e atendimento feito para você.</p><div id="footerContact"></div><div id="footerSocial"></div></div><div><strong>Comprar</strong><a href="/catalogo" data-link>Catálogo</a><a href="/novidades" data-link>Novidades</a><a href="/promocoes" data-link>Promoções</a><a href="/inspire-se" data-link>Inspire-se</a></div><div><strong>Ajuda</strong><a href="/contato" data-link>Contato</a><a href="/politicas" data-link>Trocas e entregas</a><a href="/privacidade" data-link>Privacidade e LGPD</a></div><div><strong>Sua conta</strong><a href="/minha-conta" data-link>Minha conta</a><a href="/pedidos" data-link>Pedidos</a><a href="/favoritos" data-link>Favoritos</a><a href="/admin" data-link>Administração</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Geise Confecções.</span><span>Geise V4</span></div></footer>
+
+    <nav class="bottom-nav mobile-only" aria-label="Navegação móvel"><a href="/" data-link data-nav="home"><span data-icon="home"></span><small>Início</small></a><a href="/catalogo" data-link data-nav="catalog"><span data-icon="grid"></span><small>Catálogo</small></a><button id="mobileSearchButton"><span data-icon="search"></span><small>Buscar</small></button><a href="/favoritos" data-link data-nav="favorites"><span data-icon="heart"></span><small>Favoritos</small></a><a href="/carrinho" data-link data-nav="cart"><span data-icon="bag"></span><small>Carrinho</small><span class="nav-badge" id="mobileCartCount" hidden>0</span></a></nav>
+
+    <button class="chat-launcher" id="chatLauncher" aria-label="Abrir assistente Geise"><span data-icon="message"></span></button>
+    <section class="chat-panel" id="chatPanel" role="dialog" aria-modal="false" aria-labelledby="chatTitle" aria-hidden="true"><header><div><small>Assistente virtual</small><strong id="chatTitle">Gê ✦</strong></div><button class="icon-btn" id="chatClose" aria-label="Fechar chat"><span data-icon="x"></span></button></header><div class="chat-messages" id="chatMessages" aria-live="polite"></div><div class="quick-replies" id="quickReplies"></div><form class="chat-form" id="chatForm"><input name="message" autocomplete="off" placeholder="Ex.: vestido preto até R$ 150" aria-label="Mensagem"><button class="icon-btn primary" aria-label="Enviar"><span data-icon="send"></span></button></form></section>
+
+    <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  </div>
+  <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>

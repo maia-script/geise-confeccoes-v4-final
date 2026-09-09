@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: geise-confeccoes
+    runtime: node
+    plan: free
+    region: virginia
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: geise-confeccoes-db
+          property: connectionString
+      - key: DATABASE_SSL
+        value: "true"
+      - key: DATABASE_POOL_MAX
+        value: "10"
+      - key: SESSION_TTL_HOURS
+        value: "168"
+      - key: ORDER_RESERVATION_MINUTES
+        value: "30"
+      - key: FREE_SHIPPING_THRESHOLD
+        value: "200"
+      - key: STANDARD_SHIPPING_PRICE
+        value: "10"
+      - key: WHATSAPP_NUMBER
+        value: "5566996676270"
+      - key: PAYMENT_PROVIDER
+        value: manual
+      - key: AI_PROVIDER
+        value: local
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+
+databases:
+  - name: geise-confeccoes-db
+    plan: free
+    region: virginia
+    databaseName: geise
+    user: geise
+    ipAllowList: []

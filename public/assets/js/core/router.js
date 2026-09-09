@@ -1,0 +1,3 @@
+export function navigate(path,{replace=false}={}){if(replace)history.replaceState({},'',path);else history.pushState({},'',path);window.dispatchEvent(new CustomEvent('geise:navigate'));}
+export function initRouter(){document.addEventListener('click',e=>{const a=e.target.closest('a[data-link]');if(!a||a.target==='_blank'||e.metaKey||e.ctrlKey||e.shiftKey)return;const url=new URL(a.href,location.href);if(url.origin!==location.origin)return;e.preventDefault();navigate(url.pathname+url.search);});window.addEventListener('popstate',()=>window.dispatchEvent(new CustomEvent('geise:navigate')));}
+export function route(){return {path:location.pathname,query:new URLSearchParams(location.search)};}

@@ -1,0 +1,21 @@
+{
+  "name": "geise-confeccoes-v4-rc",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Geise Confecções V4 RC — e-commerce/PWA full-stack com catálogo por código, badges, checkout autenticado, pagamentos modulares, IA opcional e PostgreSQL em produção.",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --watch --env-file-if-exists=.env server.mjs",
+    "test": "node tests/unit.mjs && node tests/smoke.mjs",
+    "check": "node tests/check-project.mjs",
+    "verify": "node tests/check-project.mjs && node tests/deep-audit.mjs && node tests/unit.mjs && node tests/smoke.mjs",
+    "audit": "node tests/deep-audit.mjs"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "pg": "^8.13.0"
+  }
+}
